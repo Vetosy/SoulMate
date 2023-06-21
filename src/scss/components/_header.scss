@@ -1,10 +1,12 @@
 .header {
   padding-top: 50px;
-  padding-bottom: 44px;
-  background-color: var(--wildsand-color);
+  padding-bottom: 80px;
+  background-color: var(--light-color);
 
-  &__container {
+  &__top {
     @include flex-all-sb;
+
+    margin-bottom: 40px;
   }
 
   &__list {
@@ -36,5 +38,19 @@
     font-size: 16px;
     line-height: 18px;
     color: var(--black-color);
+  }
+
+  &__offer {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 33px 0;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--black-color);
+    border: 2px solid var(--black-color);
+    border-radius: 50px;
   }
 }
