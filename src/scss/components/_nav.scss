@@ -1,0 +1,23 @@
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @include mr(35px);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--black-color);
+  }
+
+  &__link {
+    @include flex-all-center;
+
+    padding: 10px 24px;
+    border: 1px solid var(--black-color);
+    border-radius: 40px;
+    color: currentColor;
+  }
+}

@@ -1,0 +1,40 @@
+.header {
+  padding-top: 50px;
+  padding-bottom: 44px;
+  background-color: var(--wildsand-color);
+
+  &__container {
+    @include flex-all-sb;
+  }
+
+  &__list {
+    @include flex-all-center;
+  }
+
+  &__item {
+    @include mr(10px);
+  }
+
+  &__link {
+    display: block;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      object-fit: cover;
+    }
+
+    &--vk {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__phone {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--black-color);
+  }
+}
