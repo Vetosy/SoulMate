@@ -1,0 +1,114 @@
+.about {
+  padding: 50px 0 60px;
+  background-color: var(--wildsand-color);
+
+  &__title {
+    margin-bottom: 32px;
+    -webkit-text-stroke: 2px var(--black-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__descr {
+    margin: 0 auto 52px;
+    text-align: center;
+    max-width: 720px;
+    width: 100%;
+    padding: 22px 21px;
+    border-radius: 30px 0px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.44px;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+  }
+
+  &__wrapper {
+    @include flex-all-center;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 80px;
+      width: 100px;
+      height: 114px;
+      background-image: url(../img/about-decor-3.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__content {
+    max-width: 504px;
+    margin-bottom: 85px;
+  }
+
+  &__slogan {
+    position: relative;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 50px;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    color: var(--black-color);
+    border-radius: 70px;
+    border: 4px solid var(--accent-color);
+    background-color: var(--light-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: -20px;
+      width: 47px;
+      height: 49px;
+      background-image: url(../img/about-decor-1.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      right: -30px;
+      width: 100px;
+      height: 114px;
+      background-image: url(../img/about-decor-2.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    max-width: 296px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    color: var(--accent-color);
+  }
+
+  &__image {
+    display: block;
+  }
+
+  &__waiting {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+    padding: 22px 21px;
+    border-radius: 30px 0px;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0.44px;
+    text-transform: uppercase;
+    background-color: var(--dolly-color);
+    color: var(--black-color);
+  }
+}

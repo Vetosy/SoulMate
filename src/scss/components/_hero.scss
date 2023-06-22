@@ -12,9 +12,10 @@
     margin-bottom: 19px;
   }
 
-  .content {
+  .slogan {
     &__text {
       display: block;
+      padding-right: 40px;
       font-weight: 900;
       font-size: 96px;
       line-height: 106px;
@@ -23,7 +24,6 @@
       color: var(--light-color);
 
       &--stroke {
-        position: relative;
         color: transparent;
         -webkit-text-stroke: 2px var(--light-color);
       }
@@ -32,10 +32,6 @@
     &__bottom {
       display: flex;
       align-items: center;
-    }
-
-    &__btn {
-      margin-left: 40px;
     }
   }
 
