@@ -6,9 +6,21 @@
   line-height: 18px;
   color: var(--black-color);
   border-radius: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &--fill {
+    @include hover {
+      transform: translate(-4px, -4px);
+      box-shadow: 4px 4px var(--black-color);
+    }
+  }
 
   &--fill-accent {
     background-color: var(--accent-color);
+
+    @include hover {
+      background-color: var(--accent-color);
+    }
   }
 
   &--fill-yellow {
@@ -19,5 +31,21 @@
     line-height: 26px;
     color: var(--black-color);
     background-color: var(--dolly-color);
+
+    @include hover {
+      background-color: var(--dolly-color);
+      box-shadow: 6px 6px var(--celery-color);
+    }
+  }
+
+  &:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+  }
+
+  &:active {
+    color: var(--scorpion-color);
+    transform: translate(0);
+    box-shadow: none;
   }
 }

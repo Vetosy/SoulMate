@@ -1,5 +1,5 @@
 .about {
-  padding: 50px 0 60px;
+  padding-top: 50px;
   background-color: var(--wildsand-color);
 
   &__title {
@@ -28,6 +28,8 @@
     position: relative;
 
     &::before {
+      @include elemVibrate;
+
       content: "";
       position: absolute;
       top: 20px;
@@ -38,6 +40,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      animation: 4s linear 0.7s infinite forwards elemVibrate;
     }
   }
 
@@ -59,6 +62,8 @@
     background-color: var(--light-color);
 
     &::before {
+      @include elemRotate;
+
       content: "";
       position: absolute;
       bottom: 20px;
@@ -69,6 +74,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      animation: 5s linear 0.3s infinite forwards elemRotate;
     }
 
     &::after {
@@ -82,6 +88,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      animation: 4s linear 0.4s infinite forwards elemVibrate;
     }
   }
 

@@ -25,6 +25,11 @@
       height: 30px;
       object-fit: cover;
     }
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 4px;
+    }
   }
 
   &__phone {
@@ -33,6 +38,11 @@
     font-size: 16px;
     line-height: 18px;
     color: var(--black-color);
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 4px;
+    }
   }
 
   &__offer {
@@ -47,5 +57,19 @@
     color: var(--black-color);
     border: 2px solid var(--black-color);
     border-radius: 50px;
+    transition: background-color 0.3s ease;
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 4px;
+    }
+
+    @include hover {
+      background-color: var(--dolly-color);
+    }
+
+    &:active {
+      color: var(--scorpion-color);
+    }
   }
 }
