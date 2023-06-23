@@ -28,7 +28,7 @@
     position: relative;
 
     &::before {
-      @include elemVibrate;
+      @include elemTwinkle;
 
       content: "";
       position: absolute;
@@ -40,7 +40,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      animation: 4s linear 0.7s infinite forwards elemVibrate;
+      animation: 3s infinite elemTwinkle;
     }
   }
 
@@ -78,6 +78,8 @@
     }
 
     &::after {
+      @include elemVibrate;
+
       content: "";
       position: absolute;
       bottom: -40px;
