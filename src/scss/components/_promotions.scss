@@ -1,0 +1,97 @@
+.promotions {
+  padding: 60px 0 180px;
+  background-color: var(--light-color);
+
+  .swiper {
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 60px;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    height: 100%;
+    display: flex;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    display: block;
+  }
+
+  &__content {
+    padding: 70px 44px;
+    border: 1px solid var(--black-color);
+    background-color: var(--ziggurat-color);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    color: var(--black-color);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-top: auto;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    color: var(--black-color);
+  }
+
+  &__btns {
+    @include flex-all-center;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--black-color);
+    border-radius: 100%;
+
+    svg {
+      width: 20px;
+      height: 23px;
+      fill: var(--black-color);
+    }
+
+    &--prev {
+      margin-right: 180px;
+    }
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 135px;
+  }
+}
