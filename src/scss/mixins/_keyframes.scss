@@ -94,3 +94,47 @@
     }
   }
 }
+
+@mixin elemTwinkle {
+  @keyframes elemTwinkle {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+}
+
+@mixin elemRotateTopLeft {
+  @keyframes elemRotateTopLeft {
+    0% {
+      transform: translate(0) translateY(0) rotate(0);
+      animation-timing-function: ease-in-out;
+    }
+
+    50% {
+      transform: translate(-12px) translateY(-13px) rotate(-35deg);
+      animation-timing-function: ease-in-out;
+    }
+    100% {
+      transform: translate(0) translateY(0) rotate(0);
+    }
+  }
+}
+
+@keyframes ticker-animation {
+  from {
+    transform: translateZ(0);
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

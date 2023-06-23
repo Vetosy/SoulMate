@@ -1,0 +1,256 @@
+.services {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+  background-color: var(--accent-color);
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 240px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/services-bg-main.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 60px;
+    padding-right: 85px;
+    color: var(--light-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 53px;
+      height: 53px;
+      border-radius: 100%;
+      background-color: var(--ziggurat-color);
+    }
+  }
+
+  &__list {
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @include mb(15px);
+
+    &--manicure {
+      &::before {
+        @include elemTwinkle;
+
+        bottom: 0;
+        left: 0;
+        width: 120px;
+        height: 120px;
+        background-image: url(../img/services-decor-1.svg);
+        animation: 3s infinite elemTwinkle;
+      }
+
+      &::after {
+        @include elemRotate;
+
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 112px;
+        height: 116px;
+        background-image: url(../img/services-decor-2.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        animation: 7s linear 0.3s infinite forwards elemRotate;
+      }
+    }
+
+    &--pedicure {
+      flex-direction: row-reverse;
+
+      &::before {
+        @include elemRotateTopLeft;
+
+        bottom: 0;
+        right: 0;
+        width: 112px;
+        height: 112px;
+        background-image: url(../img/services-decor-3.svg);
+        animation: 3s linear 0.3s infinite forwards elemRotateTopLeft;
+      }
+    }
+
+    &--makup {
+      flex-direction: row-reverse;
+    }
+
+    &--nails {
+      &::before {
+        top: 0;
+        left: 0;
+        width: 129px;
+        height: 134px;
+        background-image: url(../img/services-decor-4.svg);
+        animation: 7s linear 0.3s infinite forwards elemRotate;
+      }
+    }
+
+    &--haircut {
+      flex-direction: row-reverse;
+
+      &::before {
+        bottom: 0;
+        right: 0;
+        width: 108px;
+        height: 108px;
+        background-image: url(../img/services-decor-1.svg);
+        animation: 3s linear 0.3s infinite forwards elemRotateTopLeft;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 460px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+    color: var(--light-color);
+  }
+
+  &__subitem {
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    color: var(--light-color);
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    color: var(--light-color);
+  }
+
+  &__picture {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    &--manicure {
+      &::after {
+        left: -25px;
+        width: 492px;
+        height: 382px;
+        background-image: url(../img/services-bg-1.svg);
+      }
+    }
+
+    &--pedicure {
+      &::after {
+        top: 30px;
+        left: -60px;
+        width: 450px;
+        height: 367px;
+        background-image: url(../img/services-bg-2.svg);
+      }
+    }
+
+    &--brows {
+      &::after {
+        top: 5px;
+        left: -30px;
+        width: 450px;
+        height: 367px;
+        background-image: url(../img/services-bg-3.svg);
+      }
+    }
+
+    &--makup {
+      &::after {
+        top: 35px;
+        left: 0;
+        width: 546px;
+        height: 330px;
+        background-image: url(../img/services-bg-4.svg);
+      }
+    }
+
+    &--nails {
+      &::after {
+        top: 0;
+        left: -10px;
+        width: 488px;
+        height: 350px;
+        background-image: url(../img/services-bg-5.svg);
+      }
+    }
+
+    &--haircut {
+      &::after {
+        top: 12px;
+        left: -40px;
+        width: 445px;
+        height: 384px;
+        background-image: url(../img/services-bg-6.svg);
+      }
+    }
+
+    &--laying {
+      &::after {
+        top: 30px;
+        left: -30px;
+        width: 533px;
+        height: 374px;
+        background-image: url(../img/services-bg-7.svg);
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto 60px;
+  }
+}
