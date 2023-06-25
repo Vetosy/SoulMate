@@ -1,0 +1,35 @@
+.reviews {
+  padding: 160px 0;
+  background-color: var(--dolly-color);
+
+  &__title {
+    margin-bottom: 64px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  &__item {
+    grid-column: 4 span;
+    padding: 50px;
+    max-width: 460px;
+    height: auto;
+    background-color: var(--accent-color);
+  }
+
+  &__content {
+    padding-top: 214px;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    color: var(--black-color);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+}
