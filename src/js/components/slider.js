@@ -1,12 +1,14 @@
 import Swiper, {
   Navigation,
   Pagination,
+  Autoplay
 } from 'swiper';
 
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 const promotionsSlider = document.querySelector('.promotions__slider')
+const reviewsSlider = document.querySelector('.reviews__slider')
 
 if (promotionsSlider) {
   const promotionsSliderSwiper = new Swiper(promotionsSlider, {
@@ -22,6 +24,20 @@ if (promotionsSlider) {
       el: '.promotions__pag',
       type: 'bullets',
       clickable: true,
+    },
+  });
+}
+
+
+if (reviewsSlider) {
+  const reviewsSliderSwiper = new Swiper(reviewsSlider, {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    loop: true,
+    loopedSlides: 10,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
     },
   });
 }

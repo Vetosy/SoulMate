@@ -1,6 +1,35 @@
 .reviews {
+  position: relative;
   padding: 160px 0;
   background-color: var(--dolly-color);
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100px);
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/reviews-bg-1.svg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/reviews-bg-2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
 
   &__title {
     margin-bottom: 64px;
@@ -8,26 +37,55 @@
 
   &__list {
     margin-bottom: 80px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
   }
 
   &__item {
-    grid-column: 4 span;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+
+    @include mr(20px);
+
+    @include mb(20px);
+
     padding: 50px;
-    max-width: 460px;
+    max-width: 450px;
+    width: 100%;
     background-color: var(--accent-color);
+
+    &:nth-child(4) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        width: 78px;
+        height: 84px;
+        background-image: url(../img/services-decor-1.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        animation: 3s linear 0.3s infinite forwards elemRotateTopLeft;
+      }
+    }
+
+    &:nth-child(5) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        width: 129px;
+        height: 152px;
+        background-image: url(../img/services-decor-4.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        animation: 7s linear 0.3s infinite forwards elemRotate;
+      }
+    }
   }
 
   &__content {
     position: relative;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     padding-top: 214px;
     font-size: 18px;
     letter-spacing: 0.36px;
@@ -49,37 +107,37 @@
 
     &--one {
       &::before {
-        background-image: url(../img/reviews-author-1.jpg);
+        background-image: url(../img/reviews-author-1.webp);
       }
     }
 
     &--two {
       &::before {
-        background-image: url(../img/reviews-author-2.jpg);
+        background-image: url(../img/reviews-author-2.webp);
       }
     }
 
     &--three {
       &::before {
-        background-image: url(../img/reviews-author-3.jpg);
+        background-image: url(../img/reviews-author-3.webp);
       }
     }
 
     &--four {
       &::before {
-        background-image: url(../img/reviews-author-4.jpg);
+        background-image: url(../img/reviews-author-4.webp);
       }
     }
 
     &--five {
       &::before {
-        background-image: url(../img/reviews-author-5.jpg);
+        background-image: url(../img/reviews-author-5.webp);
       }
     }
 
     &--six {
       &::before {
-        background-image: url(../img/reviews-author-6.jpg);
+        background-image: url(../img/reviews-author-6.webp);
       }
     }
   }
@@ -87,10 +145,6 @@
   &__descr {
     margin: 0;
     margin-bottom: 25px;
-  }
-
-  &__name {
-    margin-top: auto;
   }
 
   &__info {
@@ -113,9 +167,7 @@
   }
 
   &__social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-all-center;
   }
 
   &__social-item {
@@ -124,5 +176,16 @@
 
   &__social-image {
     display: block;
+  }
+
+  &__image {
+    display: block;
+    max-width: 268px;
+    height: 292px;
+    border: 1px solid var(--black-color);
+  }
+
+  .swiper-slide {
+    max-width: 268px;
   }
 }
