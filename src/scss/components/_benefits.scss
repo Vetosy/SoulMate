@@ -6,6 +6,7 @@
   &__decor {
     position: relative;
     padding: 72px 0;
+    margin-bottom: 72px;
 
     &::after {
       content: "";
@@ -73,6 +74,7 @@
     position: absolute;
     display: block;
     border: 1px solid var(--black-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 13;
 
     &--one {
@@ -169,6 +171,80 @@
         background-position: center;
         animation: 7s linear 0.3s infinite forwards elemRotate;
       }
+    }
+  }
+
+  &__list {
+    margin-bottom: 350px;
+    display: flex;
+    align-items: inherit;
+    justify-content: space-between;
+  }
+
+  &__item {
+    @include flex-all-center;
+
+    position: relative;
+    max-width: 460px;
+    padding: 40px 90px 276px;
+    border: 1px solid var(--black-color);
+    background-color: var(--dolly-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -25%;
+      width: 460px;
+      height: 460px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--one {
+      &::after {
+        background-image: url(../img/benefits-img-1.webp);
+      }
+    }
+
+    &--two {
+      &::after {
+        background-image: url(../img/benefits-img-2.webp);
+      }
+    }
+
+    &--three {
+      &::after {
+        background-image: url(../img/benefits-img-3.webp);
+      }
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    max-width: 280px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    color: var(--black-color);
+  }
+
+  &__apply {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 200px;
+      left: -200px;
+      width: 178px;
+      height: 213px;
+      background-image: url(../img/services-decor-4.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      animation: 7s linear 0.3s infinite forwards elemRotate;
     }
   }
 }
