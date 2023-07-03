@@ -1,6 +1,6 @@
 .reviews {
   position: relative;
-  padding: 160px 0;
+  padding-top: 160px;
   background-color: var(--dolly-color);
   z-index: 1;
 
@@ -23,12 +23,12 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
     background-image: url(../img/reviews-bg-2.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: -1;
+    pointer-events: none;
   }
 
   &__title {
@@ -148,7 +148,6 @@
   }
 
   &__info {
-    margin-bottom: 80px;
     text-align: center;
   }
 
@@ -183,6 +182,10 @@
     max-width: 268px;
     height: 292px;
     border: 1px solid var(--black-color);
+  }
+
+  &__slider {
+    transform: translateY(80px);
   }
 
   .swiper-slide {
