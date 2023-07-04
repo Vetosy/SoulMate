@@ -3,6 +3,7 @@
   background-color: var(--dolly-color);
 
   &__title {
+    position: relative;
     margin: 0;
     margin-bottom: 26px;
     text-align: center;
@@ -10,6 +11,35 @@
     font-weight: 700;
     letter-spacing: 0.72px;
     color: var(--black-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 156px;
+      height: 162px;
+      background-image: url(../img/franchise-decor1.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      animation: 7s linear 0.3s infinite forwards elemRotate;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(50%);
+      width: 236px;
+      height: 245px;
+      background-image: url(../img/franchise-decor2.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      animation: 7s linear 0.3s infinite forwards elemRotate;
+    }
   }
 
   &__logo {
@@ -22,6 +52,7 @@
   }
 
   &__descr {
+    position: relative;
     margin: 0 auto;
     padding: 40px 60px;
     max-width: 673px;
@@ -33,6 +64,20 @@
     letter-spacing: 0.72px;
     background-color: var(--accent-color);
     color: var(--black-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -100px;
+      width: 129px;
+      height: 134px;
+      background-image: url(../img/franchise-decor2.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      animation: 7s linear 0.3s infinite forwards elemRotate;
+    }
   }
 
   &__btn {
