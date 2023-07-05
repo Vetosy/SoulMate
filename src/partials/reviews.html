@@ -3,14 +3,14 @@
     <h2 class="reviews__title title">Отзывы</h2>
     <ul class="reviews__list list-reset grid">
       <li class="reviews__item">
-        <div class="reviews__content reviews__content--one">
+        <div class="reviews__content" style="background-image: url(../img/reviews-author-1.webp);">
           <p class="reviews__descr">Прародителем текста-рыбы является известный "Lorem Ipsum" — латинский текст, ноги
             которого растут аж из 45 года до нашей эры.</p>
           <span class="reviews__name">Евгения</span>
         </div>
       </li>
       <li class="reviews__item">
-        <div class="reviews__content reviews__content--two">
+        <div class="reviews__content" style="background-image: url(../img/reviews-author-2.webp);">
           <p class="reviews__descr">Прародителем текста-рыбы является известный "Lorem Ipsum" — латинский текст, ноги
             которого растут аж из 45 года до нашей эры. Сервисов по созданию случайного текста на основе Lorem Ipsum
             великое множество, однако все они имеют один существенный недостатоквцвй великое множество, однако все они
@@ -19,13 +19,13 @@
         </div>
       </li>
       <li class="reviews__item">
-        <div class="reviews__content reviews__content--three">
+        <div class="reviews__content" style="background-image: url(../img/reviews-author-3.webp);">
           <p class="reviews__descr">Прародителем текста-рыбы является известный "Lorem Ipsum" — </p>
           <span class="reviews__name">Евгения</span>
         </div>
       </li>
       <li class="reviews__item">
-        <div class="reviews__content reviews__content--four">
+        <div class="reviews__content" style="background-image: url(../img/reviews-author-4.webp);">
           <p class="reviews__descr">Прародителем текста-рыбы является известный "Lorem Ipsum" — латинский текст, ноги
             которого растут аж из 45 года до нашей эры. Прародителем текста-рыбы является известный "Lorem Ipsum" —
             латинский текст, ноги которого растут аж из 45 года до нашей эры.</p>
@@ -33,14 +33,14 @@
         </div>
       </li>
       <li class="reviews__item">
-        <div class="reviews__content reviews__content--five">
+        <div class="reviews__content" style="background-image: url(../img/reviews-author-5.webp);">
           <p class="reviews__descr">Прародителем текста-рыбы является известный "Lorem Ipsum" — латинский текст, ноги
             которого растут аж из 45 года до нашей эры. </p>
           <span class="reviews__name">Евгения</span>
         </div>
       </li>
       <li class="reviews__item">
-        <div class="reviews__content reviews__content--six">
+        <div class="reviews__content" style="background-image: url(../img/reviews-author-6.webp);">
           <p class="reviews__descr">Прародителем текста-рыбы является известный "Lorem Ipsum" — латинский текст, ноги
             которого растут аж из 45 года до нашей эры. Сервисов по созданию случайного текста на основе Lorem Ipsum
             великое множество, однако все они имеют один существенный </p>
@@ -79,53 +79,81 @@
   <div class="reviews__slider swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <picture>
-          <source srcset="img/reviews-img-1.webp" type="image/webp">
-          <img loading="lazy" src="img/reviews-img-1.jpg" class="reviews__image" width="268" height="292" alt=""
-            aria-hidden="true">
-        </picture>
+        <a class="reviews__link" href="#">
+          <picture>
+            <source media="(min-width: 576px)" srcset="img/reviews-img-1_2x.webp 2x" type="image/webp">
+            <source media="(max-width: 575px)" srcset="img/reviews-img-1.webp" type="image/webp">
+            <source srcset="img/reviews-img-1.webp" type="image/webp">
+            <img loading="lazy" src="img/reviews-img-1.jpg" srcset="img/reviews-img-1_2x.jpg 2x" class="reviews__image"
+              width="268" height="292" alt="" aria-hidden="true">
+          </picture>
+        </a>
       </div>
       <div class="swiper-slide">
-        <picture>
-          <source srcset="img/reviews-img-2.webp" type="image/webp">
-          <img loading="lazy" src="img/reviews-img-2.jpg" class="reviews__image" width="268" height="292" alt=""
-            aria-hidden="true">
-        </picture>
+        <a class="reviews__link" href="#">
+          <picture>
+            <source media="(min-width: 576px)" srcset="img/reviews-img-2_2x.webp 2x" type="image/webp">
+            <source media="(max-width: 575px)" srcset="img/reviews-img-2.webp" type="image/webp">
+            <source srcset="img/reviews-img-2.webp" type="image/webp">
+            <img loading="lazy" src="img/reviews-img-2.jpg" srcset="img/reviews-img-2_2x.jpg 2x" class="reviews__image"
+              width="268" height="292" alt="" aria-hidden="true">
+          </picture>
+        </a>
       </div>
       <div class="swiper-slide">
-        <picture>
-          <source srcset="img/reviews-img-3.webp" type="image/webp">
-          <img loading="lazy" src="img/reviews-img-3.jpg" class="reviews__image" width="268" height="292" alt=""
-            aria-hidden="true">
-        </picture>
+        <a class="reviews__link" href="#">
+          <picture>
+            <source media="(min-width: 576px)" srcset="img/reviews-img-3_2x.webp 2x" type="image/webp">
+            <source media="(max-width: 575px)" srcset="img/reviews-img-3.webp" type="image/webp">
+            <source srcset="img/reviews-img-3.webp" type="image/webp">
+            <img loading="lazy" src="img/reviews-img-3.jpg" srcset="img/reviews-img-3_2x.jpg 2x" class="reviews__image"
+              width="268" height="292" alt="" aria-hidden="true">
+          </picture>
+        </a>
       </div>
       <div class="swiper-slide">
-        <picture>
-          <source srcset="img/reviews-img-4.webp" type="image/webp">
-          <img loading="lazy" src="img/reviews-img-4.jpg" class="reviews__image" width="268" height="292" alt=""
-            aria-hidden="true">
-        </picture>
+        <a class="reviews__link" href="#">
+          <picture>
+            <source media="(min-width: 576px)" srcset="img/reviews-img-4_2x.webp 2x" type="image/webp">
+            <source media="(max-width: 575px)" srcset="img/reviews-img-4.webp" type="image/webp">
+            <source srcset="img/reviews-img-4.webp" type="image/webp">
+            <img loading="lazy" src="img/reviews-img-4.jpg" srcset="img/reviews-img-4_2x.jpg 2x" class="reviews__image"
+              width="268" height="292" alt="" aria-hidden="true">
+          </picture>
+        </a>
       </div>
       <div class="swiper-slide">
-        <picture>
-          <source srcset="img/reviews-img-5.webp" type="image/webp">
-          <img loading="lazy" src="img/reviews-img-5.jpg" class="reviews__image" width="268" height="292" alt=""
-            aria-hidden="true">
-        </picture>
+        <a class="reviews__link" href="#">
+          <picture>
+            <source media="(min-width: 576px)" srcset="img/reviews-img-5_2x.webp 2x" type="image/webp">
+            <source media="(max-width: 575px)" srcset="img/reviews-img-5.webp" type="image/webp">
+            <source srcset="img/reviews-img-5.webp" type="image/webp">
+            <img loading="lazy" src="img/reviews-img-5.jpg" srcset="img/reviews-img-5_2x.jpg 2x" class="reviews__image"
+              width="268" height="292" alt="" aria-hidden="true">
+          </picture>
+        </a>
       </div>
       <div class="swiper-slide">
-        <picture>
-          <source srcset="img/reviews-img-4.webp" type="image/webp">
-          <img loading="lazy" src="img/reviews-img-4.jpg" class="reviews__image" width="268" height="292" alt=""
-            aria-hidden="true">
-        </picture>
+        <a class="reviews__link" href="#">
+          <picture>
+            <source media="(min-width: 576px)" srcset="img/reviews-img-1_2x.webp 2x" type="image/webp">
+            <source media="(max-width: 575px)" srcset="img/reviews-img-1.webp" type="image/webp">
+            <source srcset="img/reviews-img-1.webp" type="image/webp">
+            <img loading="lazy" src="img/reviews-img-1.jpg" srcset="img/reviews-img-1_2x.jpg 2x" class="reviews__image"
+              width="268" height="292" alt="" aria-hidden="true">
+          </picture>
+        </a>
       </div>
       <div class="swiper-slide">
-        <picture>
-          <source srcset="img/reviews-img-4.webp" type="image/webp">
-          <img loading="lazy" src="img/reviews-img-4.jpg" class="reviews__image" width="268" height="292" alt=""
-            aria-hidden="true">
-        </picture>
+        <a class="reviews__link" href="#">
+          <picture>
+            <source media="(min-width: 576px)" srcset="img/reviews-img-2_2x.webp 2x" type="image/webp">
+            <source media="(max-width: 575px)" srcset="img/reviews-img-2.webp" type="image/webp">
+            <source srcset="img/reviews-img-2.webp" type="image/webp">
+            <img loading="lazy" src="img/reviews-img-2.jpg" srcset="img/reviews-img-2_2x.jpg 2x" class="reviews__image"
+              width="268" height="292" alt="" aria-hidden="true">
+          </picture>
+        </a>
       </div>
     </div>
   </div>

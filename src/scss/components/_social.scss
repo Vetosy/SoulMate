@@ -7,5 +7,10 @@
 
   &__link {
     display: block;
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 4px;
+    }
   }
 }

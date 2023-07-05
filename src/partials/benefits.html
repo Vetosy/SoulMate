@@ -3,9 +3,11 @@
     <h2 class="visually-hidden">Наши преимущества</h2>
     <div class="benefits__decor">
       <picture>
+        <source media="(min-width: 576px)" srcset="img/benefits-main-img_2x.webp 2x" type="image/webp">
+        <source media="(max-width: 575px)" srcset="img/benefits-main-img.webp" type="image/webp">
         <source srcset="img/benefits-main-img.webp" type="image/webp">
-        <img loading="lazy" src="img/benefits-main-img.png" class="benefits__image" width="1200" height="512" alt=""
-          aria-hidden="true">
+        <img loading="lazy" src="img/benefits-main-img.png" srcset="img/benefits-main-img_2x.png 2x"
+          class="benefits__image" width="1200" height="512" alt="" aria-hidden="true">
       </picture>
       <picture class="benefits__picture benefits__picture--one">
         <source srcset="img/benefits-decor1.webp" type="image/webp">
@@ -47,12 +49,15 @@
           в SOULMATE!</h3>
         <p class="apply__descr">Оставляй заявку и когда откроется свободная вакансия,
           мы пригласим тебя на собеседование!</p>
-        <button class="apply__btn btn btn--fill btn--fill-accent btn-reset">Заполнить анкету</button>
+        <button class="apply__btn btn btn--fill btn--fill-accent btn-reset" aria-label="Заполнить анкету">Заполнить
+          анкету</button>
       </div>
       <picture>
+        <source media="(min-width: 576px)" srcset="img/benefits-apply-bg_2x.webp 2x" type="image/webp">
+        <source media="(max-width: 575px)" srcset="img/benefits-apply-bg.webp" type="image/webp">
         <source srcset="img/benefits-apply-bg.webp" type="image/webp">
-        <img loading="lazy" src="img/benefits-apply-bg.jpg" class="apply__image" width="960" height="576" alt=""
-          aria-hidden="true">
+        <img loading="lazy" src="img/benefits-apply-bg.jpg" srcset="img/benefits-apply-bg_2x.jpg 2x"
+          class="apply__image" width="960" height="576" alt="" aria-hidden="true">
       </picture>
     </div>
   </div>
