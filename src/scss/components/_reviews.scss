@@ -169,18 +169,6 @@
     }
   }
 
-  &__social {
-    @include flex-all-center;
-  }
-
-  &__social-item {
-    @include mr(60px);
-  }
-
-  &__social-image {
-    display: block;
-  }
-
   &__image {
     display: block;
     max-width: 268px;
