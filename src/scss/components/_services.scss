@@ -252,5 +252,10 @@
   &__btn {
     display: block;
     margin: 0 auto 60px;
+
+    &:focus {
+      outline: 2px solid var(--dolly-color);
+      outline-offset: 4px;
+    }
   }
 }

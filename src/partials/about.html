@@ -11,9 +11,11 @@
           и авторские услуги!</p>
       </div>
       <picture>
+        <source media="(min-width: 576px)" srcset="img/about-bg_2x.webp 2x" type="image/webp">
+        <source media="(max-width: 575px)" srcset="img/about-bg.webp" type="image/webp">
         <source srcset="img/about-bg.webp" type="image/webp">
-        <img loading="lazy" src="img/about-bg.png" class="about__image" width="561" height="640"
-          alt="Две девушки обнимаются и улыбаются">
+        <img loading="lazy" src="img/about-bg.png" srcset="img/about-bg_2x.png 2x" class="about__image" width="561"
+          height="640" alt="Две девушки обнимаются и улыбаются">
       </picture>
     </div>
     <p class="about__waiting">ЖДЁМ ТЕБЯ НА идеальный МЭТЧ!</p>

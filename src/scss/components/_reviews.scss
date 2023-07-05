@@ -90,56 +90,9 @@
     font-size: 18px;
     letter-spacing: 0.36px;
     color: var(--black-color);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 164px;
-      height: 164px;
-      border-radius: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    &--one {
-      &::before {
-        background-image: url(../img/reviews-author-1.webp);
-      }
-    }
-
-    &--two {
-      &::before {
-        background-image: url(../img/reviews-author-2.webp);
-      }
-    }
-
-    &--three {
-      &::before {
-        background-image: url(../img/reviews-author-3.webp);
-      }
-    }
-
-    &--four {
-      &::before {
-        background-image: url(../img/reviews-author-4.webp);
-      }
-    }
-
-    &--five {
-      &::before {
-        background-image: url(../img/reviews-author-5.webp);
-      }
-    }
-
-    &--six {
-      &::before {
-        background-image: url(../img/reviews-author-6.webp);
-      }
-    }
+    background-repeat: no-repeat;
+    background-size: 164px 164px;
+    background-position: top center;
   }
 
   &__descr {

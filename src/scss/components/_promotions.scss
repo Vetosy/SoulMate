@@ -24,6 +24,11 @@
   &__link {
     height: 100%;
     display: flex;
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 4px;
+    }
   }
 
   &__wrapper {
@@ -72,7 +77,9 @@
     width: 50px;
     height: 50px;
     border: 1px solid var(--black-color);
+    background-color: var(--light-color);
     border-radius: 100%;
+    transition: background-color 0.3s ease, fill 0.3s ease;
 
     svg {
       width: 20px;
@@ -82,6 +89,19 @@
 
     &--prev {
       margin-right: 180px;
+    }
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 4px;
+    }
+
+    @include hover {
+      background-color: var(--accent-color);
+
+      svg {
+        fill: var(--dolly-color);
+      }
     }
   }
 

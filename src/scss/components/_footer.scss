@@ -68,6 +68,11 @@
     font-weight: 400;
     letter-spacing: 0.36px;
     color: var(--black-color);
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 4px;
+    }
   }
 
   &__form-btn {
