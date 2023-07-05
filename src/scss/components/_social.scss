@@ -1,0 +1,11 @@
+.social {
+  @include flex-all-center;
+
+  &__item {
+    @include mr(60px);
+  }
+
+  &__link {
+    display: block;
+  }
+}

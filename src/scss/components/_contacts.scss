@@ -58,6 +58,7 @@
   }
 
   &__street {
+    margin: 0;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 0.4px;
@@ -71,6 +72,7 @@
   &__map {
     margin-bottom: 26px;
     max-width: 964px;
+    width: 100%;
     min-height: 400px;
   }
 
