@@ -129,7 +129,14 @@
     border: 1px solid var(--black-color);
   }
 
+  .swiper {
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+  }
+
   &__slider {
+    max-width: 268px;
     transform: translateY(80px);
   }
 

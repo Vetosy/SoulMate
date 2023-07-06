@@ -122,3 +122,35 @@ a {
   letter-spacing: -3.76px;
   color: var(--accent-color);
 }
+
+.burger {
+  @include burger;
+
+  --burger-width: 28px;
+  --burger-height: 24px;
+  --burger-line-height: 4px;
+  display: none;
+  color: var(--accent-color);
+  z-index: 2000;
+
+  &::before {
+    border-radius: 5px;
+  }
+
+  &::after {
+    border-radius: 5px;
+  }
+
+  &__line {
+    border-radius: 5px;
+  }
+
+  &:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+  }
+
+  @include big-tablet {
+    display: block;
+  }
+}
