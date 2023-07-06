@@ -12,7 +12,7 @@ const reviewsSlider = document.querySelector('.reviews__slider')
 
 if (promotionsSlider) {
   const promotionsSliderSwiper = new Swiper(promotionsSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     loopedSlides: 5,
@@ -31,7 +31,7 @@ if (promotionsSlider) {
 
 if (reviewsSlider) {
   const reviewsSliderSwiper = new Swiper(reviewsSlider, {
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     loopedSlides: 10,

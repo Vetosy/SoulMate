@@ -9,12 +9,9 @@
     padding-bottom: 60px;
   }
 
-  .swiper-slide {
-    height: auto;
-  }
-
   &__slider {
     position: relative;
+    max-width: 460px;
   }
 
   &__title {

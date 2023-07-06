@@ -43,7 +43,7 @@
     letter-spacing: 0.36px;
     color: var(--black-color);
     background-color: var(--wildsand-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 
     &:focus {
       outline: 2px solid var(--dolly-color);
@@ -52,7 +52,6 @@
 
     @include hover {
       background-color: var(--dolly-color);
-      color: var(--accent-color);
     }
   }
 
@@ -90,7 +89,6 @@
   &__map {
     margin-bottom: 26px;
     max-width: 964px;
-    width: 100%;
     min-height: 400px;
   }
 

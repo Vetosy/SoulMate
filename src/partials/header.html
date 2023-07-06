@@ -1,43 +1,53 @@
 <header class="header">
   <div class="container">
     <div class="header__top">
-      <nav class="header__nav nav" aria-label="Основное меню">
-        <ul class="nav__list list-reset">
-          <li class="nav__item"><a href="#" class="nav__link link">О нас</a></li>
-          <li class="nav__item"><a href="#" class="nav__link link">Услуги</a></li>
-          <li class="nav__item"><a href="#" class="nav__link link">Акции</a></li>
-          <li class="nav__item"><a href="#" class="nav__link link">Контакты</a></li>
+      <div class="header__content" data-menu>
+        <nav class="header__nav nav" aria-label="Основное меню">
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a href="#about" data-scroll data-menu-item class="nav__link link">О нас</a></li>
+            <li class="nav__item"><a href="#services" data-scroll data-menu-item class="nav__link link">Услуги</a></li>
+            <li class="nav__item"><a href="#promotions" data-scroll data-menu-item class="nav__link link">Акции</a></li>
+            <li class="nav__item"><a href="#contacts" data-scroll data-menu-item class="nav__link link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__logo logo">
+          <img loading="lazy" src="img/logo.svg" class="logo__image" width="221" height="47"
+            alt="SoulMate Логотип сайта">
+        </a>
+        <ul class="header__list list-reset">
+          <li class="header__item">
+            <a class="header__link" href="#" aria-label="Instagram" target="_blank">
+              <svg>
+                <use xlink:href="img/sprite.svg#insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#" aria-label="Вконтакте" target="_blank">
+              <svg>
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#" aria-label="Телеграм" target="_blank">
+              <svg>
+                <use xlink:href="img/sprite.svg#tg"></use>
+              </svg>
+            </a>
+          </li>
         </ul>
-      </nav>
-      <a class="header__logo logo">
+        <a class="header__phone" href="tel:8999992221" aria-label="Телефон:8 999 99 22 21">8 999 99 22 21</a>
+        <button class="btn btn--fill btn--fill-accent btn-reset" aria-label="Заказать звонок">Заказать звонок</button>
+      </div>
+      <a class="header__logo-tablet logo">
         <img loading="lazy" src="img/logo.svg" class="logo__image" width="221" height="47" alt="SoulMate Логотип сайта">
       </a>
-      <ul class="header__list list-reset">
-        <li class="header__item">
-          <a class="header__link" href="#" aria-label="Instagram" target="_blank">
-            <svg>
-              <use xlink:href="img/sprite.svg#insta"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="header__item">
-          <a class="header__link" href="#" aria-label="Вконтакте" target="_blank">
-            <svg>
-              <use xlink:href="img/sprite.svg#vk"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="header__item">
-          <a class="header__link" href="#" aria-label="Телеграм" target="_blank">
-            <svg>
-              <use xlink:href="img/sprite.svg#tg"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <a class="header__phone" href="tel:8999992221" aria-label="Телефон:8 999 99 22 21">8 999 99 22 21</a>
-      <button class="btn btn--fill btn--fill-accent btn-reset" aria-label="Заказать звонок">Заказать звонок</button>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
     </div>
-    <a class="header__offer" href="#">ПРЕДЛОЖЕНИЕ</a>
+    <a class="header__offer" data-scroll data-menu-item href="#franchise">ПРЕДЛОЖЕНИЕ</a>
   </div>
 </header>
