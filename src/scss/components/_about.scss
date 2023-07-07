@@ -20,6 +20,14 @@
     letter-spacing: 0.44px;
     background-color: var(--accent-color);
     color: var(--light-color);
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__wrapper {
@@ -42,11 +50,23 @@
       background-position: center;
       animation: 3s infinite elemRotateTopLeft;
     }
+
+    @include tablet {
+      flex-direction: column;
+
+      &::before {
+        top: -30px;
+      }
+    }
   }
 
   &__content {
     max-width: 504px;
     margin-bottom: 85px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
   }
 
   &__slogan {
@@ -92,6 +112,18 @@
       background-position: center;
       animation: 4s linear 0.4s infinite forwards elemVibrate;
     }
+
+    @include tablet {
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+        width: 70px;
+        height: 74px;
+      }
+    }
   }
 
   &__text {
@@ -119,5 +151,9 @@
     text-transform: uppercase;
     background-color: var(--dolly-color);
     color: var(--black-color);
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 }
