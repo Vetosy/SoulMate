@@ -3,6 +3,10 @@
 
   &__item {
     @include mr(60px);
+
+    @include mobile {
+      @include mr(20px);
+    }
   }
 
   &__link {

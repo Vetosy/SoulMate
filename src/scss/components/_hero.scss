@@ -6,6 +6,10 @@
   background-size: cover;
   background-position: center;
 
+  @include mobile {
+    padding-bottom: 68px;
+  }
+
   &__content {
     display: block;
     max-width: 641px;

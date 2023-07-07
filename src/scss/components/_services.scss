@@ -39,6 +39,10 @@
       border-radius: 100%;
       background-color: var(--ziggurat-color);
     }
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
   }
 
   &__list {
@@ -58,6 +62,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      z-index: -1;
     }
 
     @include mb(15px);
@@ -114,8 +119,8 @@
       &::before {
         top: 0;
         left: 0;
-        width: 129px;
-        height: 134px;
+        width: 100px;
+        height: 100px;
         background-image: url(../img/services-decor-4.svg);
         animation: 7s linear 0.3s infinite forwards elemRotate;
       }
@@ -133,10 +138,30 @@
         animation: 3s linear 0.3s infinite forwards elemRotateTopLeft;
       }
     }
+
+    @include tablet {
+      flex-direction: column;
+
+      @include mb(30px);
+    }
+
+    @include mobile {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
   &__content {
     max-width: 460px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
   }
 
   &__subtitle {
@@ -241,6 +266,12 @@
         width: 533px;
         height: 374px;
         background-image: url(../img/services-bg-7.svg);
+      }
+    }
+
+    @include mobile {
+      &::after {
+        display: none;
       }
     }
   }

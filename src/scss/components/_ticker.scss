@@ -6,6 +6,10 @@
   border-top: 1px solid var(--black-color);
   border-bottom: 1px solid var(--black-color);
 
+  @include tablet {
+    padding: 15px 0;
+  }
+
   &__wrapper {
     display: flex;
   }
@@ -32,6 +36,14 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+    }
+
+    @include tablet {
+      font-size: 16px;
+
+      &::before {
+        top: -6px;
+      }
     }
   }
 }
