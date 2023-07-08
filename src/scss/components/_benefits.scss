@@ -3,10 +3,24 @@
   padding: 250px 0 150px;
   background-color: var(--accent-color);
 
+  @include mobile {
+    padding-top: 120px;
+  }
+
   &__decor {
     position: relative;
     padding: 72px 0;
     margin-bottom: 72px;
+
+    @include big-tablet {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
 
     &::after {
       content: "";
@@ -51,6 +65,17 @@
       z-index: 2;
     }
 
+    @include tablet {
+      &::after {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+
     &--one {
       &::after {
         top: 20px;
@@ -75,6 +100,15 @@
     border: 1px solid var(--black-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 13;
+
+    @include tablet {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
 
     &--one {
       top: 0;
@@ -104,6 +138,12 @@
     color: var(--black-color);
     z-index: 1;
 
+    @include mobile {
+      max-width: 100%;
+      padding: 15px;
+      font-size: 16px;
+    }
+
     &--place {
       top: 0;
       right: 100px;
@@ -121,6 +161,7 @@
         background-size: cover;
         background-position: center;
         animation: 7s linear 0.3s infinite forwards elemRotate;
+        z-index: -1;
       }
 
       &::before {
@@ -135,6 +176,19 @@
         background-size: cover;
         background-position: center;
         animation: 7s linear 0.3s infinite forwards elemRotate;
+        z-index: -1;
+      }
+
+      @include mobile {
+        right: 0;
+
+        &::after {
+          display: none;
+        }
+
+        &::before {
+          top: 0;
+        }
       }
     }
 
@@ -155,6 +209,7 @@
         background-size: cover;
         background-position: center;
         animation: 7s linear 0.3s infinite forwards elemRotate;
+        z-index: -1;
       }
 
       &::before {
@@ -169,60 +224,53 @@
         background-size: cover;
         background-position: center;
         animation: 7s linear 0.3s infinite forwards elemRotate;
+        z-index: -1;
+      }
+
+      @include mobile {
+        left: 0;
+
+        &::after {
+          left: 0;
+          bottom: 0;
+        }
+
+        &::before {
+          display: none;
+        }
       }
     }
   }
 
   &__list {
-    margin-bottom: 350px;
-    display: flex;
-    align-items: inherit;
-    justify-content: space-between;
+    margin-bottom: 140px;
   }
 
   &__item {
-    @include flex-all-center;
-
-    position: relative;
-    max-width: 460px;
-    padding: 40px 90px 276px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 4 span;
+    max-width: 453px;
+    height: 100%;
     border: 1px solid var(--black-color);
     background-color: var(--dolly-color);
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -25%;
-      width: 460px;
-      height: 460px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+    @include tablet {
+      grid-column: 6 span;
+      max-width: 100%;
     }
 
-    &--one {
-      &::after {
-        background-image: url(../img/benefits-img-1.webp);
-      }
-    }
-
-    &--two {
-      &::after {
-        background-image: url(../img/benefits-img-2.webp);
-      }
-    }
-
-    &--three {
-      &::after {
-        background-image: url(../img/benefits-img-3.webp);
-      }
+    @include small-tablet {
+      grid-column: 12 span;
     }
   }
 
   &__descr {
+    @include flex-all-center;
+
+    flex-grow: 1;
     margin: 0;
-    max-width: 280px;
+    padding: 100px 50px;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.36px;
