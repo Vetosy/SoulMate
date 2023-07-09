@@ -1,6 +1,10 @@
 .nav {
   &__list {
     display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -10,6 +14,12 @@
     font-size: 16px;
     line-height: 18px;
     color: var(--black-color);
+
+    @include mobile {
+      @include mr(0);
+
+      @include mb(20px);
+    }
   }
 
   &__link {

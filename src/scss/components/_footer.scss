@@ -2,6 +2,10 @@
   padding: 100px 0;
   background-color: var(--gray-color);
 
+  @include tablet {
+    padding: 60px 0;
+  }
+
   &__logo {
     .logo__image {
       margin: 0 auto 40px;
@@ -12,6 +16,11 @@
     @include flex-all-sb;
 
     margin-bottom: 80px;
+
+    @include big-tablet {
+      margin-bottom: 30px;
+      flex-direction: column-reverse;
+    }
   }
 
   &__copy {
@@ -19,6 +28,20 @@
     font-size: 16px;
     font-weight: 500;
     color: var(--black-color);
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__nav {
+    @include big-tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__timetable {
@@ -27,6 +50,11 @@
     font-size: 16px;
     font-weight: 400;
     color: var(--black-color);
+
+    @include big-tablet {
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
   }
 
   &__days {
@@ -34,9 +62,15 @@
   }
 
   &__form {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    @include flex-all-sb;
+
+    @include big-tablet {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__form-content {
+    margin-bottom: 30px;
   }
 
   &__form-descr {
@@ -46,16 +80,35 @@
     font-weight: 400;
     letter-spacing: 0.36px;
     color: var(--black-color);
+
+    @include big-tablet {
+      text-align: center;
+      max-width: 100%;
+    }
   }
 
   &__form-wrapper {
     display: flex;
     align-items: center;
+
+    @include big-tablet {
+      justify-content: center;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__form-field {
     width: 320px;
     margin-right: 40px;
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
   }
 
   &__form-input {
@@ -78,5 +131,9 @@
   &__form-btn {
     display: block;
     padding: 26px 29px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }
