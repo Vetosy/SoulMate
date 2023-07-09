@@ -55,6 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    z-index: 1;
 
     &::before {
       content: "";
@@ -62,6 +63,10 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      z-index: -1;
+    }
+
+    &::after {
       z-index: -1;
     }
 
@@ -94,6 +99,18 @@
         background-position: center;
         animation: 7s linear 0.3s infinite forwards elemRotate;
       }
+
+      @include mobile {
+        &::after {
+          width: 60px;
+          height: 60px;
+        }
+
+        &::before {
+          width: 60px;
+          height: 60px;
+        }
+      }
     }
 
     &--pedicure {
@@ -108,6 +125,14 @@
         height: 112px;
         background-image: url(../img/services-decor-3.svg);
         animation: 3s linear 0.3s infinite forwards elemRotateTopLeft;
+      }
+
+      @include mobile {
+        &::before {
+          top: 20px;
+          width: 60px;
+          height: 60px;
+        }
       }
     }
 
@@ -124,6 +149,15 @@
         background-image: url(../img/services-decor-4.svg);
         animation: 7s linear 0.3s infinite forwards elemRotate;
       }
+
+      @include mobile {
+        &::before {
+          left: auto;
+          right: 0;
+          width: 60px;
+          height: 60px;
+        }
+      }
     }
 
     &--haircut {
@@ -137,22 +171,21 @@
         background-image: url(../img/services-decor-1.svg);
         animation: 3s linear 0.3s infinite forwards elemRotateTopLeft;
       }
+
+      @include mobile {
+        &::before {
+          right: auto;
+          left: 20px;
+          width: 60px;
+          height: 60px;
+        }
+      }
     }
 
     @include tablet {
       flex-direction: column;
 
       @include mb(30px);
-    }
-
-    @include mobile {
-      &::after {
-        display: none;
-      }
-
-      &::before {
-        display: none;
-      }
     }
   }
 

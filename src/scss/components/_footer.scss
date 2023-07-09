@@ -122,6 +122,14 @@
     letter-spacing: 0.36px;
     color: var(--black-color);
 
+    @include mobile {
+      text-align: center;
+
+      &::placeholder {
+        text-align: center;
+      }
+    }
+
     &:focus {
       outline: 2px solid var(--accent-color);
       outline-offset: 4px;
