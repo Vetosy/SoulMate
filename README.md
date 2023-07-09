@@ -1,4 +1,4 @@
-# SoulMate Маникюрный салон(Landing page) [(Ссылка на проект)](https://vetosy.github.io/SoulMate/)
+# Маникюрный салон(Landing page) [(Ссылка на проект)](https://vetosy.github.io/SoulMate/)
 
 ## 🛠 Стэк
 - HTML5
