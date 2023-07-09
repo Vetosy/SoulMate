@@ -78,6 +78,10 @@
     @include hover {
       background-color: var(--dolly-color);
     }
+
+    @include mobile {
+      max-width: 100%;
+    }
   }
 
   &__btn {

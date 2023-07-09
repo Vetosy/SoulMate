@@ -10,6 +10,7 @@ import { enableScroll } from '../functions/enable-scroll';
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
+    overlay.classList.toggle('overlay--active')
 
     if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
@@ -37,6 +38,8 @@ import { enableScroll } from '../functions/enable-scroll';
       burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
       enableScroll();
+      overlay.classList.remove('overlay--active');
     });
   });
+
 })();
