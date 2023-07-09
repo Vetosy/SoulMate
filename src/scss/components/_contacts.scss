@@ -2,15 +2,28 @@
   padding: 150px 0 70px;
   background-color: var(--accent-color);
 
+  @include tablet {
+    padding: 60px 0;
+  }
+
   &__title {
     margin-bottom: 64px;
     color: var(--dolly-color);
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__top {
     @include flex-all-sb;
 
     margin-bottom: 54px;
+
+    @include tablet {
+      margin-bottom: 30px;
+      flex-direction: column;
+    }
   }
 
   &__location {
@@ -18,6 +31,10 @@
     font-weight: 700;
     letter-spacing: 0.36px;
     color: var(--black-color);
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__sity {
@@ -25,12 +42,20 @@
     font-weight: 400;
     letter-spacing: 0.4px;
     color: var(--black-color);
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__connection {
     display: flex;
     align-items: center;
     gap: 33px;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__link {
@@ -60,18 +85,34 @@
       outline: 2px solid var(--dolly-color);
       outline-offset: 4px;
     }
+
+    @include small-tablet {
+      width: 100%;
+    }
   }
 
   &__info {
     display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__left {
     margin-right: 20px;
+
+    @include tablet {
+      margin-right: 0;
+    }
   }
 
   &__image {
     margin-bottom: 26px;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__street {
@@ -80,6 +121,10 @@
     font-weight: 400;
     letter-spacing: 0.4px;
     color: var(--black-color);
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__right {
@@ -90,6 +135,10 @@
     margin-bottom: 26px;
     max-width: 964px;
     min-height: 400px;
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   &__timetable {

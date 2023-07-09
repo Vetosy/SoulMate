@@ -4,7 +4,7 @@
   background-color: var(--accent-color);
 
   @include mobile {
-    padding-top: 120px;
+    padding: 120px 0 80px;
   }
 
   &__decor {
@@ -244,6 +244,10 @@
 
   &__list {
     margin-bottom: 140px;
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
   }
 
   &__item {
@@ -251,7 +255,6 @@
     flex-direction: column;
     grid-column: 4 span;
     max-width: 453px;
-    height: 100%;
     border: 1px solid var(--black-color);
     background-color: var(--dolly-color);
 
@@ -270,11 +273,15 @@
 
     flex-grow: 1;
     margin: 0;
-    padding: 100px 50px;
+    padding: 50px;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.36px;
     color: var(--black-color);
+  }
+
+  &__img {
+    width: 100%;
   }
 
   &__apply {
@@ -292,6 +299,22 @@
       background-size: cover;
       background-position: center;
       animation: 7s linear 0.3s infinite forwards elemRotate;
+    }
+
+    @include big-tablet {
+      &::before {
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @include mobile {
+      &::before {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 }

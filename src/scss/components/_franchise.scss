@@ -2,6 +2,10 @@
   padding: 128px 0 147px;
   background-color: var(--dolly-color);
 
+  @include tablet {
+    padding: 60px 0px;
+  }
+
   &__title {
     position: relative;
     margin: 0;
@@ -11,6 +15,7 @@
     font-weight: 700;
     letter-spacing: 0.72px;
     color: var(--black-color);
+    z-index: 1;
 
     &::before {
       content: "";
@@ -24,6 +29,7 @@
       background-size: cover;
       background-position: center;
       animation: 7s linear 0.3s infinite forwards elemRotate;
+      z-index: -1;
     }
 
     &::after {
@@ -39,6 +45,31 @@
       background-size: cover;
       background-position: center;
       animation: 7s linear 0.3s infinite forwards elemRotate;
+      z-index: -1;
+    }
+
+    @include tablet {
+      &::before {
+        width: 100px;
+        height: 100px;
+      }
+
+      &::after {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @include mobile {
+      &::before {
+        width: 50px;
+        height: 50px;
+      }
+
+      &::after {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 
@@ -47,7 +78,9 @@
     margin-bottom: 70px;
 
     .logo__image {
+      position: relative;
       margin: 0 auto;
+      z-index: 1;
     }
   }
 
@@ -64,6 +97,7 @@
     letter-spacing: 0.72px;
     background-color: var(--accent-color);
     color: var(--black-color);
+    z-index: 1;
 
     &::before {
       content: "";
@@ -77,6 +111,33 @@
       background-size: cover;
       background-position: center;
       animation: 7s linear 0.3s infinite forwards elemRotate;
+      z-index: -1;
+    }
+
+    @include tablet {
+      &::before {
+        left: 0;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @include small-tablet {
+      margin-bottom: 30px;
+      padding: 20px 30px;
+      max-width: 100%;
+      font-size: 24px;
+      transform: none;
+
+      &::before {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @include mobile {
+      padding: 20px;
+      font-size: 20px;
     }
   }
 
@@ -87,5 +148,12 @@
     font-weight: 700;
     max-width: 469px;
     padding: 29px 60px;
+
+    @include mobile {
+      max-width: 100%;
+      font-size: 16px;
+      width: 100%;
+      padding: 16px;
+    }
   }
 }

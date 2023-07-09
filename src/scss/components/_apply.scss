@@ -1,6 +1,10 @@
 .apply {
   display: flex;
 
+  @include big-tablet {
+    flex-direction: column;
+  }
+
   &__content {
     flex-grow: 1;
     display: flex;
@@ -8,6 +12,14 @@
     padding: 54px;
     max-width: 460px;
     background-color: var(--dolly-color);
+
+    @include big-tablet {
+      max-width: 100%;
+    }
+
+    @include mobile {
+      padding: 20px;
+    }
   }
 
   &__title {
@@ -19,6 +31,15 @@
     letter-spacing: 0.72px;
     text-transform: uppercase;
     color: var(--black-color);
+
+    @include big-tablet {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__descr {
@@ -29,6 +50,16 @@
     font-weight: 700;
     letter-spacing: 0.36px;
     color: var(--black-color);
+
+    @include big-tablet {
+      margin-bottom: 30px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__btn {
@@ -37,9 +68,17 @@
     max-width: 100%;
     font-size: 22px;
     font-weight: 700;
+
+    @include mobile {
+      padding: 16px;
+    }
   }
 
   &__image {
     display: block;
+
+    @include big-tablet {
+      width: 100%;
+    }
   }
 }
