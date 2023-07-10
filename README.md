@@ -7,6 +7,7 @@
 - БЭМ
 - JS
 - Figma
+-API Yandex Map
 
 [![My Skills](https://skillicons.dev/icons?i=js,html,scss,figma,gulp,)](https://skillicons.dev)
 
@@ -17,5 +18,6 @@
 - Подключение Яндекс Карт
 - Тикер анимацию
 - Слайдер
-- Анимация
+- Анимация блоков
+- CSS анимация элементов
 - Декоративные элементы
