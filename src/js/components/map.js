@@ -7,14 +7,15 @@ function init() {
   });
 
   const placemark = new ymaps.Placemark(center, {
+    hintContent: 'SoulMate',
     balloonContentHeader: 'г.Новосибирск',
     balloonContentBody: 'ул. Красный проспект, 17',
     balloonContentFooter: '8 906-907-64-58',
   }, {
     iconLayout: 'default#image',
     iconImageHref: 'img/marker.svg',
-    iconImageSize: [40, 40],
-    iconImageOffset: [-20, -40],
+    iconImageSize: [80, 80],
+    iconImageOffset: [-40, -80],
   });
 
   map.controls.remove('trafficControl');
