@@ -7,7 +7,7 @@
 - БЭМ
 - JS
 - Figma
--API Yandex Map
+- API Yandex Map
 
 [![My Skills](https://skillicons.dev/icons?i=js,html,scss,figma,gulp,)](https://skillicons.dev)
 
