@@ -39,6 +39,7 @@
 
   &__sity {
     font-size: 20px;
+    font-style: normal;
     font-weight: 400;
     letter-spacing: 0.4px;
     color: var(--black-color);
@@ -122,6 +123,7 @@
   &__street {
     margin: 0;
     font-size: 20px;
+    font-style: normal;
     font-weight: 400;
     letter-spacing: 0.4px;
     color: var(--black-color);
@@ -142,6 +144,10 @@
 
     @include tablet {
       max-width: 100%;
+    }
+
+    [class*="copyrights-pane"] {
+      display: none !important;
     }
   }
 

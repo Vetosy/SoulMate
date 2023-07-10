@@ -1,19 +1,28 @@
-import ymaps from 'ymaps';
+const center = [55.02662761597713, 82.9207828920306]
 
-ymaps.load('https://api-maps.yandex.ru/2.1/?apikey=5f264f26-e07e-4f77-a379-3b0fa55eb0ab&lang=ru_RU').then(maps => {
-  const map = new maps.Map('map', {
-    center: [55.026627398452774, 82.92078348585451],
+function init() {
+  const map = new ymaps.Map('map', {
+    center: center,
     zoom: 18,
-  });
+  })
 
-  const placemark = new maps.Placemark([55.026627398452774, 82.92078348585451], {
-    hintContent: 'Soulmate',
+  const placemark = new ymaps.Placemark(center, {
+
     balloonContentHeader: 'г.Новосибирск',
     balloonContentBody: 'ул. Красный проспект, 17',
-    iconContent: 'Soulmate'
+    balloonContentFooter: '8 906-907-64-58',
   }, {
-    preset: 'islands#pinkStretchyIcon',
-  });
+    iconLayout: 'default#image',
+    iconImageHref: '../../img/marker.svg',
+    iconImageSize: [40, 40],
+    iconImageOffset: [-20, -40],
+  })
 
-  map.geoObjects.add(placemark);
-});
+  map.controls.remove('trafficControl');
+  map.controls.remove('typeSelector');
+  map.controls.remove('rulerControl');
+
+  map.geoObjects.add(placemark)
+}
+
+ymaps.ready(init);
