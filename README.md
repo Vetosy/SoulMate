@@ -8,6 +8,7 @@
 - JS
 - Figma
 - API Yandex Map
+- SEO оптимизация
 
 [![My Skills](https://skillicons.dev/icons?i=js,html,scss,figma,gulp,)](https://skillicons.dev)
 
@@ -22,3 +23,4 @@
 - Анимация блоков
 - CSS анимация элементов
 - Декоративные элементы
+- Мета информация и превью при расшаривании ссылки
