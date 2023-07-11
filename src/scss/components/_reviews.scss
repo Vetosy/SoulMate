@@ -193,6 +193,10 @@
     height: 100%;
   }
 
+  .swiper-slide {
+    max-width: 268px;
+  }
+
   &__slider {
     max-width: 268px;
     transform: translateY(80px);
@@ -200,9 +204,5 @@
     @include mobile {
       transform: translateY(50px);
     }
-  }
-
-  .swiper-slide {
-    max-width: 268px;
   }
 }
