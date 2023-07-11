@@ -3,12 +3,12 @@
 ## 🛠 Что я использовал:
 - HTML5
 - SCSS препроцессор
-- Gulp сборка
-- БЭМ
 - JS
-- Figma
+- БЭМ
 - API Yandex Map
+- Gulp сборка
 - SEO оптимизация
+- Figma
 
 [![My Skills](https://skillicons.dev/icons?i=html,scss,js,figma,gulp,svg)](https://skillicons.dev)
 
