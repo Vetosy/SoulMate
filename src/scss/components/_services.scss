@@ -294,10 +294,11 @@
 
     &--laying {
       &::after {
-        top: 30px;
+        top: 50%;
         left: -30px;
         width: 533px;
         height: 374px;
+        transform: translateY(-50%);
         background-image: url(../img/services-bg-7.svg);
       }
     }
