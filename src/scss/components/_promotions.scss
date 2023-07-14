@@ -8,8 +8,6 @@
 
   .swiper {
     overflow: visible;
-    width: 100%;
-    height: 100%;
     padding-bottom: 65px;
   }
 
@@ -27,9 +25,8 @@
   }
 
   &__link {
-    height: 100%;
-    border: 1px solid var(--black-color);
     display: flex;
+    height: 100%;
 
     &:focus {
       outline: 2px solid var(--accent-color);
@@ -40,15 +37,16 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--black-color);
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 70px 44px;
     border-top: 1px solid var(--black-color);
     background-color: var(--ziggurat-color);
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
 
     @include mobile {
       padding: 30px 20px;
