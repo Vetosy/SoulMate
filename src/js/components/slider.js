@@ -18,7 +18,6 @@ if (promotionsSlider) {
     speed: 600,
     parallax: true,
     loop: true,
-    loopedSlides: 5,
     navigation: {
       nextEl: '.promotions__btn--next',
       prevEl: '.promotions__btn--prev',
@@ -28,9 +27,16 @@ if (promotionsSlider) {
       type: 'bullets',
       clickable: true,
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1300: {
+        slidesPerView: 3,
+      }
+    }
   });
 }
-
 
 if (reviewsSlider) {
   const reviewsSliderSwiper = new Swiper(reviewsSlider, {
