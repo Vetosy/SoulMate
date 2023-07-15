@@ -13,6 +13,7 @@
 
   .swiper-slide {
     height: auto;
+    padding-bottom: 5px;
   }
 
   &__slider {
@@ -27,7 +28,6 @@
   &__link {
     display: flex;
     height: 100%;
-    margin-bottom: 5px;
 
     &:focus {
       outline: 2px solid var(--accent-color);
