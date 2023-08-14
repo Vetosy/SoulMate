@@ -38,6 +38,7 @@ if (promotionsSlider) {
   });
 }
 
+
 if (reviewsSlider) {
   const reviewsSliderSwiper = new Swiper(reviewsSlider, {
     slidesPerView: 1,
