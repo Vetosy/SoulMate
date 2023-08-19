@@ -1,4 +1,4 @@
-# Nail salon [(Project Link)](https://vetosy.github.io/SoulMate/)
+# [Nail salon](https://vetosy.github.io/SoulMate/)
 
 <a href="https://vetosy.github.io/SoulMate/"><img src="https://i.ibb.co/thQBrLX/portfolio-3-2x.jpg" alt="portfolio-3-2x" border="0"></a>
 
